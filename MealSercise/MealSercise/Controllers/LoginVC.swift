@@ -27,16 +27,17 @@ class LoginVC: UITableViewController, UITextFieldDelegate{
     
     @IBAction func logInButton(_ sender: UIButton) {
         
-        
+        // Assigns UserDefaults keys to variables
         let password = UserDefaults.standard.string(forKey: "password")
         let userName = UserDefaults.standard.string(forKey: "userName")
-                
+            // checks if textField matches UserDefaults keys
         if (textUsername.text == userName && textPassword.text == password) {
             
             let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
             welcomeVC.userName = textUsername.text!
             self.navigationController?.pushViewController(welcomeVC, animated: true)
         }else{
+        // will display an alert box in case user input does not match UserDefaults keys
             let alert = UIAlertController(title: "Warning", message: "Please enter valid credentials", preferredStyle: .alert)
                 
                  let ok = UIAlertAction(title: "OK", style: .default, handler: { action in

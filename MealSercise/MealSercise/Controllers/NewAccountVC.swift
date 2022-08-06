@@ -26,18 +26,20 @@ class NewAccountVC: UITableViewController {
     // Reference to managed object context. Is a reference to the CoreData view context.
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
-    // Data for the table
+    // Data for the table if exists
     var userInfo:[NewUser]?
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Using UserDefaults to store new user
+        // Using UserDefaults to store new user. Assigning value to a key that will be stored in
+        // UserDefaults
         let email = UserDefaults.standard.string(forKey: "email")
         let fullName = UserDefaults.standard.string(forKey: "fullName")
         let password = UserDefaults.standard.string(forKey: "password")
         let userName = UserDefaults.standard.string(forKey: "userName")
         
+        // Assigning values from text fields to keys.
         if email != nil , password != nil {
             textEmailAddress.text = email
             textNewPassword.text = password
@@ -48,7 +50,7 @@ class NewAccountVC: UITableViewController {
         //CoreData
         tableView.dataSource = self
         tableView.delegate = self
-        
+        //CoreData
         fetchInfo()
         
     }
@@ -72,7 +74,7 @@ class NewAccountVC: UITableViewController {
     
     @IBAction func createAccountButton(_ sender: Any) {
         
-        // Assigning user input to UserDefaults
+        // Assigning user input to UserDefaults keys
         UserDefaults.standard.set(textFullName.text, forKey: "fullName")
         UserDefaults.standard.set(textEmailAddress.text, forKey: "email")
         UserDefaults.standard.set(textNewPassword.text, forKey: "password")
@@ -95,11 +97,12 @@ class NewAccountVC: UITableViewController {
         }
         
         
-        let newUser = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
-        newUser.fullName = textFullName.text!
-        newUser.email = textEmailAddress.text!
-        newUser.newUser = textNewUsername.text!
-        newUser.password = textNewPassword.text!
+        let newUser = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
+        // will display info in textView
+//        newUser.fullName = textFullName.text!
+//        newUser.email = textEmailAddress.text!
+//        newUser.newUser = textNewUsername.text!
+//        newUser.password = textNewPassword.text!
         self.navigationController?.pushViewController(newUser, animated: true)
         
     }

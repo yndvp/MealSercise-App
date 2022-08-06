@@ -51,16 +51,20 @@ class ViewController: UIViewController {
         let newAccountVC = self.storyboard?.instantiateViewController(withIdentifier: "NewAccountVC") as! NewAccountVC
         self.navigationController?.pushViewController(newAccountVC, animated: true)
     }
+    
+    @IBAction func logOut(_ sender: Any) {
+
+       
+        
+        //if userIsAuthenticated {
+         //   logout()
+        }
+    
 }
 
-//
-//
-//    @IBAction func logOut(_ sender: Any) {
-//
-//        if userIsAuthenticated {
-//            logout()
-//        }
-//    }
+
+
+    
 //
 //    // MARK: UI updaters
 //    // =================
