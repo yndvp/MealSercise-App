@@ -53,7 +53,7 @@ class TodaysExercisesViewController: UIViewController {
       
     @IBAction func exitButton(_ sender: UIButton) {
         
-        let backToLogin = self.storyboard?.instantiateViewController(withIdentifier: "LoginVC") as! LoginVC
-        self.navigationController?.pushViewController(backToLogin, animated: true)
+        let backToView = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        self.navigationController?.pushViewController(backToView, animated: true)
     }
 }

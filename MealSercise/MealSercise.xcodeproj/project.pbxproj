@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7862EB57289CB3400054A9CB /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 7862EB56289CB3400054A9CB /* Auth0 */; };
+		7862EB59289CB4590054A9CB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7862EB58289CB4590054A9CB /* Auth0.plist */; };
+		788189F1289CDA6900BD178F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7F0CD288CB69200D5E4D2 /* AppDelegate.swift */; };
 		788C15F5289B409300EBBAF4 /* NewUser+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788C15F3289B409300EBBAF4 /* NewUser+CoreDataClass.swift */; };
 		788C15F6289B409300EBBAF4 /* NewUser+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788C15F4289B409300EBBAF4 /* NewUser+CoreDataProperties.swift */; };
-		788C15F9289B4F6000EBBAF4 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788C15F8289B4F6000EBBAF4 /* WelcomeVC.swift */; };
+		788C15FD289B866100EBBAF4 /* MealsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788C15FC289B866100EBBAF4 /* MealsVC.swift */; };
 		78AD8909289B1E9100E9D258 /* MealSercise.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 78AD8907289B1E9100E9D258 /* MealSercise.xcdatamodeld */; };
 		78B9E82B2894BF3C00B8B76B /* TodaysExercisesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9E82A2894BF3C00B8B76B /* TodaysExercisesViewController.swift */; };
 		78B9E82F2894FE2600B8B76B /* WelcomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78B9E82E2894FE2600B8B76B /* WelcomViewController.swift */; };
-		78C7F0CE288CB69200D5E4D2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7F0CD288CB69200D5E4D2 /* AppDelegate.swift */; };
 		78C7F0D0288CB69200D5E4D2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7F0CF288CB69200D5E4D2 /* SceneDelegate.swift */; };
 		78C7F0D2288CB69200D5E4D2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7F0D1288CB69200D5E4D2 /* ViewController.swift */; };
 		78C7F0D5288CB69200D5E4D2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 78C7F0D3288CB69200D5E4D2 /* Main.storyboard */; };
@@ -22,12 +24,15 @@
 		78C7F0E3288CC1D200D5E4D2 /* Screen Shot 2022-07-19 at 6.56.18 PM.png in Resources */ = {isa = PBXBuildFile; fileRef = 78C7F0E2288CC1D200D5E4D2 /* Screen Shot 2022-07-19 at 6.56.18 PM.png */; };
 		78C7F0E7288CDE1900D5E4D2 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7F0E6288CDE1900D5E4D2 /* LoginVC.swift */; };
 		78C7F0E9288CDE4500D5E4D2 /* NewAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78C7F0E8288CDE4500D5E4D2 /* NewAccountVC.swift */; };
+		78E5A03C289DF6AA0021200B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5A03B289DF6AA0021200B /* User.swift */; };
+		78E5A03E289E26C70021200B /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E5A03D289E26C70021200B /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7862EB58289CB4590054A9CB /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		788C15F3289B409300EBBAF4 /* NewUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewUser+CoreDataClass.swift"; sourceTree = "<group>"; };
 		788C15F4289B409300EBBAF4 /* NewUser+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewUser+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		788C15F8289B4F6000EBBAF4 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
+		788C15FC289B866100EBBAF4 /* MealsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealsVC.swift; sourceTree = "<group>"; };
 		78AD8908289B1E9100E9D258 /* MealSercise.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MealSercise.xcdatamodel; sourceTree = "<group>"; };
 		78B9E82A2894BF3C00B8B76B /* TodaysExercisesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodaysExercisesViewController.swift; sourceTree = "<group>"; };
 		78B9E82E2894FE2600B8B76B /* WelcomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +47,8 @@
 		78C7F0E2288CC1D200D5E4D2 /* Screen Shot 2022-07-19 at 6.56.18 PM.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Screen Shot 2022-07-19 at 6.56.18 PM.png"; path = "../../../../Screen Shot 2022-07-19 at 6.56.18 PM.png"; sourceTree = "<group>"; };
 		78C7F0E6288CDE1900D5E4D2 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		78C7F0E8288CDE4500D5E4D2 /* NewAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewAccountVC.swift; sourceTree = "<group>"; };
+		78E5A03B289DF6AA0021200B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		78E5A03D289E26C70021200B /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +56,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7862EB57289CB3400054A9CB /* Auth0 in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,7 +75,7 @@
 		78B9E8302895061400B8B76B /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				788C15F8289B4F6000EBBAF4 /* WelcomeVC.swift */,
+				788C15FC289B866100EBBAF4 /* MealsVC.swift */,
 				78B9E82E2894FE2600B8B76B /* WelcomViewController.swift */,
 				78B9E82A2894BF3C00B8B76B /* TodaysExercisesViewController.swift */,
 				78C7F0E8288CDE4500D5E4D2 /* NewAccountVC.swift */,
@@ -106,6 +114,9 @@
 				78C7F0D8288CB69300D5E4D2 /* LaunchScreen.storyboard */,
 				78C7F0DB288CB69300D5E4D2 /* Info.plist */,
 				78AD8907289B1E9100E9D258 /* MealSercise.xcdatamodeld */,
+				7862EB58289CB4590054A9CB /* Auth0.plist */,
+				78E5A03B289DF6AA0021200B /* User.swift */,
+				78E5A03D289E26C70021200B /* UserDefaults.swift */,
 			);
 			path = MealSercise;
 			sourceTree = "<group>";
@@ -134,6 +145,9 @@
 			dependencies = (
 			);
 			name = MealSercise;
+			packageProductDependencies = (
+				7862EB56289CB3400054A9CB /* Auth0 */,
+			);
 			productName = MealSercise;
 			productReference = 78C7F0CA288CB69200D5E4D2 /* MealSercise.app */;
 			productType = "com.apple.product-type.application";
@@ -162,6 +176,9 @@
 				Base,
 			);
 			mainGroup = 78C7F0C1288CB69200D5E4D2;
+			packageReferences = (
+				7862EB55289CB3400054A9CB /* XCRemoteSwiftPackageReference "Auth0" */,
+			);
 			productRefGroup = 78C7F0CB288CB69200D5E4D2 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -176,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7862EB59289CB4590054A9CB /* Auth0.plist in Resources */,
 				78C7F0DA288CB69300D5E4D2 /* LaunchScreen.storyboard in Resources */,
 				78C7F0D7288CB69300D5E4D2 /* Assets.xcassets in Resources */,
 				78C7F0E3288CC1D200D5E4D2 /* Screen Shot 2022-07-19 at 6.56.18 PM.png in Resources */,
@@ -190,16 +208,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				788189F1289CDA6900BD178F /* AppDelegate.swift in Sources */,
 				78C7F0D2288CB69200D5E4D2 /* ViewController.swift in Sources */,
-				78C7F0CE288CB69200D5E4D2 /* AppDelegate.swift in Sources */,
+				788C15FD289B866100EBBAF4 /* MealsVC.swift in Sources */,
 				78B9E82B2894BF3C00B8B76B /* TodaysExercisesViewController.swift in Sources */,
+				78E5A03E289E26C70021200B /* UserDefaults.swift in Sources */,
 				78C7F0D0288CB69200D5E4D2 /* SceneDelegate.swift in Sources */,
 				78C7F0E7288CDE1900D5E4D2 /* LoginVC.swift in Sources */,
 				78AD8909289B1E9100E9D258 /* MealSercise.xcdatamodeld in Sources */,
 				788C15F5289B409300EBBAF4 /* NewUser+CoreDataClass.swift in Sources */,
+				78E5A03C289DF6AA0021200B /* User.swift in Sources */,
 				78C7F0E9288CDE4500D5E4D2 /* NewAccountVC.swift in Sources */,
 				788C15F6289B409300EBBAF4 /* NewUser+CoreDataProperties.swift in Sources */,
-				788C15F9289B4F6000EBBAF4 /* WelcomeVC.swift in Sources */,
 				78B9E82F2894FE2600B8B76B /* WelcomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -349,6 +369,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MealSercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -376,6 +397,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MealSercise/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -418,6 +440,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7862EB55289CB3400054A9CB /* XCRemoteSwiftPackageReference "Auth0" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/auth0/Auth0.swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7862EB56289CB3400054A9CB /* Auth0 */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7862EB55289CB3400054A9CB /* XCRemoteSwiftPackageReference "Auth0" */;
+			productName = Auth0;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		78AD8907289B1E9100E9D258 /* MealSercise.xcdatamodeld */ = {

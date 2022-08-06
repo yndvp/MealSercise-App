@@ -43,6 +43,9 @@ class WelcomViewController: UIViewController {
     }
     
     @IBAction func mealsButton(_ sender: UIButton) {
+        
+        let mealsVC = self.storyboard?.instantiateViewController(withIdentifier: "meals") as! MealsVC
+        self.navigationController?.pushViewController(mealsVC, animated: true)
     }
     
 }

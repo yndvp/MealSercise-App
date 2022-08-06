@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginVC: UITableViewController {
+class LoginVC: UITableViewController, UITextFieldDelegate{
     
     
     @IBOutlet weak var textUsername: UITextField!
@@ -18,18 +18,37 @@ class LoginVC: UITableViewController {
     var password = ""
       
     
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
                 
-        // Do any additional setup after loading the view.
     }
     
-
     @IBAction func logInButton(_ sender: UIButton) {
         
-        let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
-        welcomeVC.userName = textUsername.text!
-        self.navigationController?.pushViewController(welcomeVC, animated: true)
+        
+        let password = UserDefaults.standard.string(forKey: "password")
+        let userName = UserDefaults.standard.string(forKey: "userName")
+                
+        if (textUsername.text == userName && textPassword.text == password) {
+            
+            let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
+            welcomeVC.userName = textUsername.text!
+            self.navigationController?.pushViewController(welcomeVC, animated: true)
+        }else{
+            let alert = UIAlertController(title: "Warning", message: "Please enter valid credentials", preferredStyle: .alert)
+                
+                 let ok = UIAlertAction(title: "OK", style: .default, handler: { action in
+                 })
+                 alert.addAction(ok)
+                 let cancel = UIAlertAction(title: "Cancel", style: .default, handler: { action in
+                 })
+                 alert.addAction(cancel)
+                 DispatchQueue.main.async(execute: {
+                    self.present(alert, animated: true)
+            })
+        }
         
     }
     

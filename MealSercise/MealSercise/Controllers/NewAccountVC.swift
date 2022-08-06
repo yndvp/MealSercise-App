@@ -32,7 +32,20 @@ class NewAccountVC: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // Using UserDefaults to store new user
+        let email = UserDefaults.standard.string(forKey: "email")
+        let fullName = UserDefaults.standard.string(forKey: "fullName")
+        let password = UserDefaults.standard.string(forKey: "password")
+        let userName = UserDefaults.standard.string(forKey: "userName")
+        
+        if email != nil , password != nil {
+            textEmailAddress.text = email
+            textNewPassword.text = password
+        }
+        
+        //print("Email: \(email!), Password: \(password!)")
+        
+        //CoreData
         tableView.dataSource = self
         tableView.delegate = self
         
@@ -40,7 +53,7 @@ class NewAccountVC: UITableViewController {
         
     }
     
-    // Will retrieve info from Core Data
+    // Will retrieve info from Core Data to display in tableview(CoreData)
     func fetchInfo() {
         
         do{
@@ -58,6 +71,29 @@ class NewAccountVC: UITableViewController {
     
     
     @IBAction func createAccountButton(_ sender: Any) {
+        
+        // Assigning user input to UserDefaults
+        UserDefaults.standard.set(textFullName.text, forKey: "fullName")
+        UserDefaults.standard.set(textEmailAddress.text, forKey: "email")
+        UserDefaults.standard.set(textNewPassword.text, forKey: "password")
+        UserDefaults.standard.set(textNewUsername.text, forKey: "userName")
+       
+        
+        // Creates a new_user object(CoreData)
+        let new_user = NewUser(context: self.context)
+        new_user.fullName = textFullName.text
+        new_user.userName = textNewUsername.text
+        new_user.password = textNewPassword.text
+        new_user.email = textEmailAddress.text
+        
+        // Save the data
+        do{
+            try self.context.save()
+        }
+        catch {
+            print("unable to save data")
+        }
+        
         
         let newUser = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
         newUser.fullName = textFullName.text!
