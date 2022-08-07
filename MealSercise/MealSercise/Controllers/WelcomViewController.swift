@@ -14,6 +14,8 @@ class WelcomViewController: UIViewController {
             
     @IBOutlet weak var newUserTextView: UITextView!
     
+    
+    
     var userName = ""
     var newUser = ""
     var fullName = ""
@@ -46,6 +48,11 @@ class WelcomViewController: UIViewController {
         
         let mealsVC = self.storyboard?.instantiateViewController(withIdentifier: "meals") as! MealsVC
         self.navigationController?.pushViewController(mealsVC, animated: true)
+    }
+    
+    
+    @IBAction func btnReview(_ sender: UIButton) {
+        let reviewVC = self.storyboard?.instantiateViewController(withIdentifier: "ReviewViewController")
     }
     
 }
