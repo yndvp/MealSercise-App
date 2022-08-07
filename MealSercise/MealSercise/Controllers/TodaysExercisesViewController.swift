@@ -19,9 +19,11 @@ class TodaysExercisesViewController: UIViewController {
     
     @IBOutlet weak var exerciseThreeLabel: UILabel!
     
+    @IBOutlet weak var e1Label: UILabel!
+    @IBOutlet weak var e2Label: UILabel!
+    @IBOutlet weak var e3Label: UILabel!
     
-    
-    
+    var exercise = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,10 +52,34 @@ class TodaysExercisesViewController: UIViewController {
         
 
             }
-      
+    
+    @IBAction func e1(_ sender: UIButton) {
+        e2Label.backgroundColor = UIColor.systemGreen
+        e3Label.backgroundColor = UIColor.systemGreen
+        e1Label.backgroundColor = UIColor.white
+        exercise = exerciseOneLabel.text!
+    }
+    
+    
+    @IBAction func e2(_ sender: UIButton) {
+        e1Label.backgroundColor = UIColor.systemGreen
+        e3Label.backgroundColor = UIColor.systemGreen
+        e2Label.backgroundColor = UIColor.white
+        exercise = exerciseTwoLabel.text!
+    }
+    
+    
+    @IBAction func e3(_ sender: UIButton) {
+        e1Label.backgroundColor = UIColor.systemGreen
+        e2Label.backgroundColor = UIColor.systemGreen
+        e3Label.backgroundColor = UIColor.white
+        exercise = exerciseThreeLabel.text!
+    }
+    
     @IBAction func exitButton(_ sender: UIButton) {
         
-        let backToView = self.storyboard?.instantiateViewController(withIdentifier: "ViewController") as! ViewController
+        let backToView = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
+        backToView.exercise = exercise
         self.navigationController?.pushViewController(backToView, animated: true)
     }
 }

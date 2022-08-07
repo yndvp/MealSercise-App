@@ -9,34 +9,30 @@ import UIKit
 
 class WelcomViewController: UIViewController {
     
-    
+    // Outlets
     @IBOutlet weak var userNameLabel: UILabel!
-            
-    @IBOutlet weak var newUserTextView: UITextView!
+    @IBOutlet weak var breakfastLabel: UILabel!
+    @IBOutlet weak var lunchLabel: UILabel!
+    @IBOutlet weak var dinnerLabel: UILabel!
+    @IBOutlet weak var exerciseLabel: UILabel!
     
-    
-    
+    // Define variables
     var userName = ""
-    var newUser = ""
-    var fullName = ""
-    var email = ""
-    var password = ""
-    
+    var breakfast = ""
+    var lunch = ""
+    var dinner = ""
+    var exercise = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Initialize the labels with corresponding data
         userNameLabel.text = userName
-        newUserTextView.text = " User Name: \(newUser)\n Full Name: \(fullName)\n Email: \(email)\n Password: \(password)"
-//        newUserTextView.text = fullName
-//        newUserTextView.text = email
-//        newUserTextView.text = password
-       
+        breakfastLabel.text = breakfast
+        lunchLabel.text = lunch
+        dinnerLabel.text = dinner
+        exerciseLabel.text = exercise
     }
-    
-    
-    @IBOutlet weak var exercises: UITabBar!
-    
     
     @IBAction func exercisesButton(_ sender: UIButton) {
 
@@ -52,7 +48,8 @@ class WelcomViewController: UIViewController {
     
     
     @IBAction func btnReview(_ sender: UIButton) {
-        let reviewVC = self.storyboard?.instantiateViewController(withIdentifier: "ReviewViewController")
+        let reviewVC = self.storyboard?.instantiateViewController(withIdentifier: "ReviewViewController") as! ReviewViewController
+        self.navigationController?.pushViewController(reviewVC, animated: true)
     }
     
 }

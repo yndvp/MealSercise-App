@@ -67,10 +67,12 @@ class MealsVC: UIViewController {
         dinnerLabel.text = "\(currentDinner)"
     }
     
-
-    @IBAction func backButton(_ sender: UIButton) {
-        let backToMain = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
-        self.navigationController?.pushViewController(backToMain, animated: true)
+    @IBAction func saveButton(_ sender: UIButton) {
+        let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
+        welcomeVC.breakfast = breakfastLabel.text!
+        welcomeVC.lunch = lunchLabel.text!
+        welcomeVC.dinner = dinnerLabel.text!
+        self.navigationController?.pushViewController(welcomeVC, animated: true)
     }
     
 }
