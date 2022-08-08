@@ -25,6 +25,11 @@ class TodaysExercisesViewController: UIViewController {
     
     var exercise = ""
     
+    // Define variables
+    var breakfast = ""
+    var lunch = ""
+    var dinner = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -80,6 +85,10 @@ class TodaysExercisesViewController: UIViewController {
         
         let backToView = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
         backToView.exercise = exercise
+        backToView.breakfast=breakfast
+        backToView.lunch=lunch
+        backToView.dinner=dinner
+        
         self.navigationController?.pushViewController(backToView, animated: true)
     }
 }

@@ -27,8 +27,8 @@ class ReviewViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     var dietData:[dietPlan] = [
-        dietPlan(breakfast: "vege", lunch: "vege", dinner: "vege", exercise: "running"),
-        dietPlan(breakfast: "sala", lunch: "vege", dinner: "vege", exercise: "running"),
+        dietPlan(breakfast: "Green Smoothie", lunch: "Zucchini Parmesan", dinner: "Fruit & Yogurt", exercise: "Hiking"),
+        dietPlan(breakfast: "Chicken Tortilla", lunch: "Baked Bean Curry", dinner: "Tomato Soup", exercise: "High-Knee running"),
     ]
     
     override func viewDidLoad() {

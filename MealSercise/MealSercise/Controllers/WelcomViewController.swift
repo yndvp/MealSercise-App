@@ -34,14 +34,7 @@ class WelcomViewController: UIViewController {
         exerciseLabel.text = exercise
     }
     
-    @IBAction func exercisesButton(_ sender: UIButton) {
-
-        let exercisesVC = self.storyboard?.instantiateViewController(withIdentifier: "TodaysExerciseVC") as! TodaysExercisesViewController
-        self.navigationController?.pushViewController(exercisesVC, animated: true)
-    }
-    
-    @IBAction func mealsButton(_ sender: UIButton) {
-        
+    @IBAction func btnBeginWithMeal(_ sender: UIButton) {
         let mealsVC = self.storyboard?.instantiateViewController(withIdentifier: "meals") as! MealsVC
         self.navigationController?.pushViewController(mealsVC, animated: true)
     }
@@ -49,6 +42,11 @@ class WelcomViewController: UIViewController {
     
     @IBAction func btnReview(_ sender: UIButton) {
         let reviewVC = self.storyboard?.instantiateViewController(withIdentifier: "ReviewViewController") as! ReviewViewController
+        
+        let newData = ReviewViewController.dietPlan(breakfast: breakfast, lunch: lunch, dinner: dinner, exercise: exercise)
+        
+        reviewVC.dietData.append(newData)
+        
         self.navigationController?.pushViewController(reviewVC, animated: true)
     }
     

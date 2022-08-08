@@ -68,11 +68,11 @@ class MealsVC: UIViewController {
     }
     
     @IBAction func saveButton(_ sender: UIButton) {
-        let welcomeVC = self.storyboard?.instantiateViewController(withIdentifier: "welcome") as! WelcomViewController
-        welcomeVC.breakfast = breakfastLabel.text!
-        welcomeVC.lunch = lunchLabel.text!
-        welcomeVC.dinner = dinnerLabel.text!
-        self.navigationController?.pushViewController(welcomeVC, animated: true)
+        let exercisesVC = self.storyboard?.instantiateViewController(withIdentifier: "TodaysExerciseVC") as! TodaysExercisesViewController
+        exercisesVC.breakfast = breakfastLabel.text!
+        exercisesVC.lunch = lunchLabel.text!
+        exercisesVC.dinner = dinnerLabel.text!
+        self.navigationController?.pushViewController(exercisesVC, animated: true)  
     }
     
 }
