@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		76513C1128A05B8100D77520 /* ReviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76513C1028A05B8100D77520 /* ReviewTableViewCell.swift */; };
 		76697177289F399F0071150E /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76697176289F399F0071150E /* ReviewViewController.swift */; };
 		7862EB57289CB3400054A9CB /* Auth0 in Frameworks */ = {isa = PBXBuildFile; productRef = 7862EB56289CB3400054A9CB /* Auth0 */; };
 		7862EB59289CB4590054A9CB /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7862EB58289CB4590054A9CB /* Auth0.plist */; };
@@ -29,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		76513C1028A05B8100D77520 /* ReviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewTableViewCell.swift; sourceTree = "<group>"; };
 		76697176289F399F0071150E /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		7862EB58289CB4590054A9CB /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Auth0.plist; sourceTree = "<group>"; };
 		788C15F3289B409300EBBAF4 /* NewUser+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NewUser+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				78C7F0E6288CDE1900D5E4D2 /* LoginVC.swift */,
 				78C7F0D1288CB69200D5E4D2 /* ViewController.swift */,
 				76697176289F399F0071150E /* ReviewViewController.swift */,
+				76513C1028A05B8100D77520 /* ReviewTableViewCell.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -214,6 +217,7 @@
 				78B9E82B2894BF3C00B8B76B /* TodaysExercisesViewController.swift in Sources */,
 				78E5A03E289E26C70021200B /* UserDefaults.swift in Sources */,
 				78C7F0D0288CB69200D5E4D2 /* SceneDelegate.swift in Sources */,
+				76513C1128A05B8100D77520 /* ReviewTableViewCell.swift in Sources */,
 				78C7F0E7288CDE1900D5E4D2 /* LoginVC.swift in Sources */,
 				78AD8909289B1E9100E9D258 /* MealSercise.xcdatamodeld in Sources */,
 				788C15F5289B409300EBBAF4 /* NewUser+CoreDataClass.swift in Sources */,
