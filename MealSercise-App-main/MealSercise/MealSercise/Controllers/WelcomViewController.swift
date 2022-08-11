@@ -3,7 +3,9 @@
 //  MealSercise
 //
 //  Created by user211625 on 7/29/22.
-//
+
+//  Author: Yunna Jang 200455725
+//  Description: This controller is for the main page that contains. begin button for setting meals & exercises plan. Once the user is done with selecting his(her) plan, it will display the plans selected
 
 import UIKit
 
@@ -16,13 +18,14 @@ class WelcomViewController: UIViewController {
     @IBOutlet weak var dinnerLabel: UILabel!
     @IBOutlet weak var exerciseLabel: UILabel!
     
-    // Define variables
+    // Define variables for passed data
     var userName = ""
     var breakfast = ""
     var lunch = ""
     var dinner = ""
     var exercise = ""
     
+    // When the welcome page is loaded
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -34,8 +37,15 @@ class WelcomViewController: UIViewController {
         exerciseLabel.text = exercise
     }
     
+    // When the user press 'begin' button
     @IBAction func btnBeginWithMeal(_ sender: UIButton) {
+        // Instantiate mealsVC
         let mealsVC = self.storyboard?.instantiateViewController(withIdentifier: "meals") as! MealsVC
+        
+        // Save user name in mealsVC
+        mealsVC.username = userName
+        
+        // Launch the mealsVC
         self.navigationController?.pushViewController(mealsVC, animated: true)
     }
     
