@@ -40,13 +40,21 @@ class WelcomViewController: UIViewController {
     }
     
     
+    /*
+     Author: Huidan Kuang 200468027
+     Description: This is a function of the Review button for the user to click and go to the Review page whose story board ID is "ReviewViewController"
+     */
     @IBAction func btnReview(_ sender: UIButton) {
+        //This is to instantiate a ViewController property
         let reviewVC = self.storyboard?.instantiateViewController(withIdentifier: "ReviewViewController") as! ReviewViewController
         
+        //This is to store the local variable in the struct which I created in the review page
         let newData = ReviewViewController.dietPlan(breakfast: breakfast, lunch: lunch, dinner: dinner, exercise: exercise)
         
+        //Append the dietData array with the newData
         reviewVC.dietData.append(newData)
         
+        //Push to reviewVC
         self.navigationController?.pushViewController(reviewVC, animated: true)
     }
     
